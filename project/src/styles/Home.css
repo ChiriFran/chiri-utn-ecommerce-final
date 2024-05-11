@@ -1,0 +1,50 @@
+.homeContainer{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: start;
+    padding: 0 8rem;
+    margin-top: 15rem;
+}
+
+.homeTitle{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin: 1rem 0;
+    margin-top: 5rem;
+}
+
+.homeText{
+    width: 50%;
+    text-align: center;
+    margin: 1rem;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.homeLink{
+    color: #fff;
+    background-color: #000000fe;
+    border: 3px solid #ffffff;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    margin: 2rem 0 0 0;
+    padding: 0.5rem 2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+span{
+    font-weight: 900;
+    font-style: italic;
+}
+
+@media screen and (max-width: 700px) {
+
+    .homeContainer{
+        padding: 0 4rem;
+        margin-top: 12rem;
+    }
+
+    .homeText{
+        width: 100%;
+    }
+}

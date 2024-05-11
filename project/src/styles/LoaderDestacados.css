@@ -1,0 +1,12 @@
+.clipLoaderContianerDestacados{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    margin: 1rem 0;
+}

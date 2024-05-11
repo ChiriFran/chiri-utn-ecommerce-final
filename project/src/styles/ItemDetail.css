@@ -1,0 +1,78 @@
+.itemDetailContainer {
+  display: flex;
+  width: 80%;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+}
+
+.itemDetailImg {
+  width: 200px;
+  margin: 1rem 1rem;
+}
+
+.itemDetailTitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 1rem 0;
+}
+
+.itemId {
+  color: rgb(136, 135, 135);
+  font-size: clamp(0.6rem, 2vw, 0.8rem);
+}
+
+.itemDetailDescription {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  margin: 0.5rem 0;
+}
+
+.itemDetailCategory {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.itemDetailPrice {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 0.5rem 0;
+}
+
+.botonesComprarEliminar {
+  display: flex;
+  flex-flow: row;
+  align-items: end;
+}
+
+.cantidadEnCarrito {
+  color: rgb(96, 96, 96);
+  padding: 0.5rem 0.5rem;
+}
+
+.eliminarDelCarrito {
+  border: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  background-color: rgba(0, 0, 0, 0.88);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.eliminarDelCarrito:hover {
+  background-color: rgba(1, 1, 1, 0.607);
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .itemDetailContainer {
+    width: 100%;
+    flex-flow: column;
+    padding: 3rem 1rem;
+  }
+
+  .botonesComprarEliminar {
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,185 @@
+.nav {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0f0c0c;
+  box-shadow: 0px 30px 23px -3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.link {
+  text-decoration: none;
+  color: #e9e9e9;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem 1rem;
+}
+
+.navBarDesktopContainer {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 3.5rem;
+  background-color: #0f0c0c;
+  padding: 0 3rem;
+}
+
+.userMenuDesktop {
+  display: flex;
+  flex-flow: row;
+}
+
+.userMenuDesktop li {
+  padding: 0 1rem;
+}
+
+.navMenuDesktop {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.carritoContainerDesktop li{
+  padding: 0 1rem;
+}
+
+.navMenuDesktop li {
+  padding: 0 1rem;
+}
+
+.navMenu,
+.userMenu {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 0;
+}
+
+.navMenu li,
+.userMenu li {
+  padding: 0 1rem;
+  list-style: none;
+}
+
+.menuIcon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #e9e9e9;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #e9e9e9;
+  cursor: pointer;
+}
+
+.closeIcon:hover {
+  color: #ffffff;
+}
+
+.carritoContainer {
+  list-style: none;
+}
+
+@media screen and (max-width: 700px) {
+  .navBarDesktopContainer {
+    display: none;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .nav {
+    padding: 1rem 2rem;
+  }
+
+  .menuIcon {
+    display: flex;
+  }
+
+  .navMenu,
+  .userMenu {
+    display: none;
+  }
+
+  .mobileMenu.active {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0f0c0c;
+    padding: 3rem 0;
+    box-shadow: 0px 30px 23px -3px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    overflow: hidden;
+  }
+
+  .mobileMenu.active ul li {
+    padding: 0.5rem 0;
+  }
+
+  .mobileMenu.active .link {
+    color: #e9e9e9;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .productosNav {
+    display: none;
+  }
+
+  .menuIcon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menuIcon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuIcon.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .mobileMenu.active .navMenu,
+  .mobileMenu.active .userMenu {
+    display: flex;
+    flex-direction: column;
+  }
+}
