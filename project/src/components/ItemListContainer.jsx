@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import 'firebase/firestore';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { useParams } from "react-router-dom";
@@ -6,6 +7,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import Loader from "./Loader";
 import SearchFilters from "./SearchFilters";
+
 
 import "../styles/ItemListContainer.css";
 
