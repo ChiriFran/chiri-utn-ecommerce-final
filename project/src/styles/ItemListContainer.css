@@ -1,7 +1,3 @@
-.productosContainer {
-  margin-top: 25vh;
-}
-
 .sinCoincidencias {
   width: 100%;
   height: 70vh;
@@ -31,10 +27,10 @@
   margin: 0 0.5rem;
 }
 
-.buscarPrecio{
+.buscarPrecio {
   margin-left: 1rem;
 }
 
-.rangoMaximoPrecio{
+.rangoMaximoPrecio {
   font-size: 1.2rem;
 }

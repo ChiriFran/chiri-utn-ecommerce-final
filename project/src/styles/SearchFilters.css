@@ -1,0 +1,30 @@
+.search-filters {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  margin-top: 25vh;
+}
+
+.barraBusqueda {
+  margin: 0 0.5rem;
+  padding: 0.5rem 0;
+  padding-left: 0.3rem;
+  border: none;
+}
+
+.categorySelect {
+  margin: 0 0.5rem;
+  border: none;
+  padding: 0.5rem 0;
+  padding-left: 0.3rem;
+}
+
+.btnBuscar {
+  border: 2px solid grey;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  padding: 0.3rem 0.5rem;
+  background-color: #fff;
+}
