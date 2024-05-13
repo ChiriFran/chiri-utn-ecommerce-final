@@ -1,6 +1,7 @@
 .detailContainer{
     display: flex;
     width: 80%;
+    height: 75vh;
     flex-flow: row;
     align-items: center;
     justify-content: center;

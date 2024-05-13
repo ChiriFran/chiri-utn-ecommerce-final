@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
   width: 100%;
   padding: 0.5rem 2rem;
   margin-top: 25vh;
@@ -13,6 +13,7 @@
   padding: 0.5rem 0;
   padding-left: 0.3rem;
   border: none;
+  display: none;
 }
 
 .categorySelect {
@@ -20,6 +21,7 @@
   border: none;
   padding: 0.5rem 0;
   padding-left: 0.3rem;
+  display: none;
 }
 
 .btnBuscar {
@@ -27,19 +29,22 @@
   font-size: clamp(0.8rem, 2vw, 1rem);
   padding: 0.3rem 0.5rem;
   background-color: #fff;
+  display: none;
 }
 
 @media screen and (max-width: 700px) {
   .search-filters {
-    margin-top: 20vh;
+    margin-top: 18vh;
     padding: 0.5rem 0.5rem;
   }
 
-  .barraBusqueda {
-    width: 50%;
+  .categorySelect {
+    width: 70%;
+    display: flex;
+    margin: 1rem 1rem;
   }
 
-  .categorySelect {
-    width: 50%;
+  .btnBuscar{
+    display: block;
   }
 }

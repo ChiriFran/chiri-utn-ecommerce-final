@@ -7,7 +7,6 @@ import ItemList from "./ItemList";
 import Loader from "./Loader";
 import SearchFilters from "./SearchFilters";
 
-
 import "../styles/ItemListContainer.css";
 
 const ItemListContainer = () => {
@@ -42,7 +41,9 @@ const ItemListContainer = () => {
       .then((resp) => {
         setProductos(resp.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         setIsLoading(false);
-        if (urlCategory) {
+        if (category) {
+          setTitulo(capitalizeFirstLetter(category));
+        } else if (urlCategory) {
           setTitulo(capitalizeFirstLetter(urlCategory));
         } else {
           setTitulo("Todos los productos");
