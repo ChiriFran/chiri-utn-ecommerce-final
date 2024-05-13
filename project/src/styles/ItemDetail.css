@@ -72,7 +72,11 @@
   .botonesComprarEliminar {
     display: flex;
     flex-flow: column;
-    align-items: start;
+    align-items: baseline;
     justify-content: center;
+  }
+
+  .eliminarDelCarrito {
+    margin: 0.5rem 0;
   }
 }

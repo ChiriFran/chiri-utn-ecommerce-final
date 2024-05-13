@@ -28,3 +28,18 @@
   padding: 0.3rem 0.5rem;
   background-color: #fff;
 }
+
+@media screen and (max-width: 700px) {
+  .search-filters {
+    margin-top: 20vh;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .barraBusqueda {
+    width: 50%;
+  }
+
+  .categorySelect {
+    width: 50%;
+  }
+}
