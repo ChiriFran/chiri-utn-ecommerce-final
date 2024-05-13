@@ -10,10 +10,16 @@ function SignUp() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
     try {
       const { user } = await createUserWithEmailAndPassword(
         auth,
@@ -21,7 +27,6 @@ function SignUp() {
         password
       );
 
-      // Guardar datos adicionales del usuario en Firestore
       await addDoc(collection(db, "users"), {
         uid: user.uid,
         firstName: firstName,
@@ -29,7 +34,8 @@ function SignUp() {
         email: email,
       });
 
-      // Manejar redirección o cualquier otra acción después del registro
+      setSuccessMessage("Registro completado con éxito, inicia sesion en Log in");
+
     } catch (error) {
       setError(error.message);
     }
@@ -74,10 +80,18 @@ function SignUp() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 ></input>
+                <input
+                  type="password"
+                  className="input"
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                ></input>
                 <button type="submit">Sign up</button>
               </div>
             </form>
             {error && <p>{error}</p>}
+            {successMessage && <p>{successMessage}</p>}
             <div className="form-section">
               <p>
                 Have an account? <Link to="/LogIn">Log In</Link> or{" "}

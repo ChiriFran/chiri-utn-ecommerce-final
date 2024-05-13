@@ -14,7 +14,6 @@ const Carrito = () => {
   return (
     <div className="carritoContainer">
       <h1 className="carritoTitle">Carrito vacio</h1>
-      <h2>Descubre algunos de nuestros productos destacados</h2>
       {carrito.length > 0 ? (
         <>
           {carrito.map((prod) => (
@@ -29,7 +28,7 @@ const Carrito = () => {
           ))}
           <h2 className="precioFinal">Precio final: ${precioTotal()}</h2>
           <div className="buttonContainer">
-            <Link to="/Checkout">Finalizar Compra</Link>
+            <Link className="finalizarCompra" to="/Checkout">Finalizar Compra</Link>
             <button onClick={handleVaciar} className="vaciarCarrito">
               Vaciar Carrito
             </button>

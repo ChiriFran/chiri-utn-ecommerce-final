@@ -8,11 +8,6 @@
   margin-top: 20vh;
 }
 
-.carritoContainer h2{
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgb(98, 98, 98);
-}
-
 .titulo,
 .cantidad,
 .precio {
@@ -22,7 +17,8 @@
 
 .titulo {
   margin-bottom: 2rem;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: black;
 }
 
 .precioTotal {
@@ -47,13 +43,22 @@
 .buttonContainer {
   display: flex;
   flex-flow: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   margin-top: 1rem;
 }
 
 button {
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+.finalizarCompra{
+  text-decoration: none;
+  color: rgb(224, 224, 224);
+  background-color: rgb(9, 9, 9);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 700px) {
